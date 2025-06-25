@@ -1,9 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { ArrowRight } from "lucide-react";
+import { useLocale } from "next-intl";
 
 const HeroSection = () => {
+  const locale = useLocale();
+
   return (
     <section className="relative">
       <div className="relative w-full aspect-[16/9] rounded-[48px] overflow-hidden">
@@ -21,11 +26,17 @@ const HeroSection = () => {
         alt=""
         width={800}
         height={800}
-        className="absolute top-30 -end-40"
+        className={`absolute top-30 -end-40 ${
+          locale === "fa" && "scale-x-[-1]"
+        }`}
       />
       <div className="absolute bottom-0 end-0 h-fit w-fit group">
         <div className="relative">
-          <div className="absolute top-[2px] -translate-y-full -end-[2px]">
+          <div
+            className={`absolute top-[2px] -translate-y-full -end-[2px] ${
+              locale === "fa" && "scale-x-[-1]"
+            }`}
+          >
             <svg
               width="70"
               height="70"
@@ -39,7 +50,13 @@ const HeroSection = () => {
               />
             </svg>
           </div>
-          <div className="absolute -bottom-[2px] -translate-x-full start-[2px]">
+          <div
+            className={`absolute -bottom-[2px] start-[2px] ${
+              locale === "fa"
+                ? "scale-x-[-1] translate-x-full"
+                : "-translate-x-full"
+            }`}
+          >
             <svg
               width="70"
               height="70"
@@ -53,7 +70,11 @@ const HeroSection = () => {
               />
             </svg>
           </div>
-          <div className="absolute top-[32px] start-[65px]">
+          <div
+            className={`absolute top-[32px] start-[65px] ${
+              locale === "fa" && "scale-x-[-1]"
+            }`}
+          >
             <svg
               width="50"
               height="50"
@@ -67,7 +88,11 @@ const HeroSection = () => {
               />
             </svg>
           </div>
-          <div className="absolute top-[61px] start-[91px] z-20">
+          <div
+            className={`absolute top-[61px] start-[91px] z-20 ${
+              locale === "fa" && "scale-x-[-1]"
+            }`}
+          >
             <svg
               width="40"
               height="40"

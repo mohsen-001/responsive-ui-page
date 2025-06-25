@@ -1,4 +1,5 @@
 import Menu from "../menu";
+import ToggleLanguage from "../toggle-language";
 import { Separator } from "../ui/separator";
 
 const Footer = () => {
@@ -8,9 +9,12 @@ const Footer = () => {
         <div className="font-black text-3xl">LOGO</div>
         <Menu />
         <Separator />
-        <p className="text-center text-sm text-gray-500">
-          © 2025 Your Company Name. All rights reserved.
-        </p>
+        <div className="flex items-center justify-between w-full">
+          <p className="text-center text-sm text-gray-500">
+            © 2025 Your Company Name. All rights reserved.
+          </p>
+          <ToggleLanguage />
+        </div>
       </div>
     </footer>
   );
