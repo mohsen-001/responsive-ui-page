@@ -18,7 +18,7 @@ const Caption = () => {
         initial={{ opacity: 0, x: 100 }}
         transition={{ ease: "easeOut", delay: 0.2, duration: 0.5 }}
         animate={{ opacity: 1, x: 0 }}
-        className="capitalize text-7xl leading-[1.2] font-bold mb-8"
+        className="capitalize text-7xl leading-[1.2] font-bold mb-8 max-xl:text-6xl"
       >
         Experience <br /> the magic of <br /> flight!
       </motion.div>

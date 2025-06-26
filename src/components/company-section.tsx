@@ -217,7 +217,7 @@ const CompanySection = () => {
       transition={{ ease: "easeOut", duration: 0.5 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
-      className="flex-1 flex items-center justify-between text-2xl h-[73px]"
+      className="flex-1 grid grid-cols-4 max-[1096px]:grid-cols-2 gap-4"
     >
       <Link
         href="#"
@@ -251,7 +251,7 @@ const CompanySection = () => {
   );
 
   return (
-    <section className="flex items-center px-20">
+    <section className="flex items-center px-20 max-xl:px-0">
       {renderSocials}
       {renderCompanies}
     </section>

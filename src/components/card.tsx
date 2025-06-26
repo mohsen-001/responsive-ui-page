@@ -32,7 +32,7 @@ const Card = ({ title, desc, img }: CardType) => {
       </div>
       <div className="flex items-center justify-between">
         <div>
-          <div className="text-2xl font-bold">{title}</div>
+          <div className="text-2xl font-bold max-xl:text-xl">{title}</div>
           <div className="mt-1 text-foreground/50">{desc}</div>
         </div>
         <Button

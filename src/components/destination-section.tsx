@@ -38,19 +38,21 @@ const popularDestinations = [
 
 const DestinationSection = () => {
   return (
-    <section className="px-20">
+    <section className="px-20 max-xl:px-0">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         transition={{ ease: "easeOut", duration: 0.5 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <div className="text-5xl font-bold">Popular Destination</div>
+        <div className="text-5xl font-bold max-xl:text-4xl">
+          Popular Destination
+        </div>
         <div className="mt-4 text-foreground/50">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </div>
       </motion.div>
-      <div className="mt-6 grid grid-cols-3 gap-4">
+      <div className="mt-6 grid grid-cols-3 gap-4 max-[1096px]:grid-cols-2">
         {popularDestinations.map((item, i) => (
           <Card
             title={item.title}

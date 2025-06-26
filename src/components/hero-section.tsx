@@ -11,7 +11,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative">
-      <div className="relative w-full aspect-[16/9] rounded-[48px] overflow-hidden">
+      <div className="relative w-full h-[85vh] rounded-[48px] overflow-hidden">
         <Image
           src="/images/hero-section-img.jpg"
           fill
@@ -26,7 +26,17 @@ const HeroSection = () => {
         alt=""
         width={800}
         height={800}
-        className={`absolute top-30 -end-40 z-30 ${
+        className={`absolute top-30 -end-40 z-30 max-xl:hidden ${
+          locale === "fa" && "scale-x-[-1]"
+        }`}
+      />
+      <Image
+        src="/images/airplane.png"
+        priority
+        alt=""
+        width={600}
+        height={600}
+        className={`absolute top-30 -end-40 z-30 hidden max-xl:block max-xl:-end-28 max-[1096px]:top-16 ${
           locale === "fa" && "scale-x-[-1]"
         }`}
       />

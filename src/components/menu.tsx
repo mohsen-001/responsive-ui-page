@@ -1,11 +1,15 @@
 import Link from "next/link";
 
 const _MENUS = ["About", "Tour", "Packages", "Contact"];
-const Menu = () => {
+const Menu = ({ className }: { className: string }) => {
   return (
-    <div className="flex items-center gap-12">
+    <div className={`flex items-center gap-12 ${className}`}>
       {_MENUS.map((menu, i) => (
-        <Link href="#" key={i} className="uppercase tracking-widest text-foreground/60 hover:text-foreground transition-all">
+        <Link
+          href="#"
+          key={i}
+          className="uppercase tracking-widest text-foreground/60 hover:text-foreground transition-all"
+        >
           {menu}
         </Link>
       ))}
