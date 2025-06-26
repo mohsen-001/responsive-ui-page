@@ -36,7 +36,7 @@ const HeroSection = () => {
         alt=""
         width={600}
         height={600}
-        className={`absolute top-30 -end-40 z-30 hidden max-xl:block max-xl:-end-28 max-[1096px]:top-16 max-[520px]:!-end-16 ${
+        className={`absolute top-30 -end-40 z-30 hidden max-xl:block max-xl:-end-28 max-[1096px]:top-16 max-[520px]:!-end-16 max-[400px]:!hidden ${
           locale === "fa" && "scale-x-[-1]"
         }`}
       />

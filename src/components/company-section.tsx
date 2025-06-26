@@ -217,7 +217,7 @@ const CompanySection = () => {
       transition={{ ease: "easeOut", duration: 0.5 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
-      className="flex-1 grid grid-cols-4 max-[1096px]:grid-cols-2 gap-4"
+      className="flex-1 grid grid-cols-4 max-[1096px]:grid-cols-2 gap-4 max-[400px]:grid-cols-1 max-[400px]:gap-8"
     >
       <Link
         href="#"
