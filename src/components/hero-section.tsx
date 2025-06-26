@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "./ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { ArrowRight } from "lucide-react";
 import { useLocale } from "next-intl";
+import Caption from "./caption";
 
 const HeroSection = () => {
   const locale = useLocale();
@@ -26,7 +26,7 @@ const HeroSection = () => {
         alt=""
         width={800}
         height={800}
-        className={`absolute top-30 -end-40 ${
+        className={`absolute top-30 -end-40 z-30 ${
           locale === "fa" && "scale-x-[-1]"
         }`}
       />
@@ -147,15 +147,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="absolute top-2/4 start-24 -translate-y-2/4 text-black">
-        <div className="uppercase">Elevate Your Travel Journey</div>
-        <div className="capitalize text-7xl leading-[1.2] font-bold mb-8">
-          Experience <br /> the magic of <br /> flight!
-        </div>
-        <Button className="py-8 px-14 bg-m-primary text-white hover:bg-m-primary/80">
-          Book A Trip Now
-        </Button>
-      </div>
+      <Caption />
     </section>
   );
 };

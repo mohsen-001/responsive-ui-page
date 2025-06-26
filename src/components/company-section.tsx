@@ -1,5 +1,8 @@
+"use client";
+
 import { Dribbble, Facebook, Github, TwitterIcon } from "lucide-react";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 const airbnb_original = (
   <svg
@@ -159,7 +162,13 @@ const expedia = (
 
 const CompanySection = () => {
   const renderSocials = (
-    <div className="flex items-center gap-6 border py-4 px-6 rounded-full w-fit">
+    <motion.div
+      initial={{ opacity: 0, x: -100 }}
+      transition={{ ease: "easeOut", duration: 0.5 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      className="flex items-center gap-6 border py-4 px-6 rounded-full w-fit"
+    >
       Follow
       <div className="flex items-center gap-3">
         <Link
@@ -199,28 +208,46 @@ const CompanySection = () => {
           />
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 
   const renderCompanies = (
-    <div className="flex-1 flex items-center justify-between text-2xl h-[73px]">
-      <Link href="#" className="group flex items-center justify-center flex-1 h-full">
+    <motion.div
+      initial={{ opacity: 0, x: 100 }}
+      transition={{ ease: "easeOut", duration: 0.5 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      className="flex-1 flex items-center justify-between text-2xl h-[73px]"
+    >
+      <Link
+        href="#"
+        className="group flex items-center justify-center flex-1 h-full"
+      >
         <div className="group-hover:hidden">{airbnb}</div>
         <div className="hidden group-hover:block">{airbnb_original}</div>
       </Link>
-      <Link href="#" className="group flex items-center justify-center flex-1 h-full">
+      <Link
+        href="#"
+        className="group flex items-center justify-center flex-1 h-full"
+      >
         <div className="group-hover:hidden">{booking}</div>
         <div className="hidden group-hover:block">{booking_original}</div>
       </Link>
-      <Link href="#" className="group flex items-center justify-center flex-1 h-full">
+      <Link
+        href="#"
+        className="group flex items-center justify-center flex-1 h-full"
+      >
         <div className="group-hover:hidden">{trivago}</div>
         <div className="hidden group-hover:block">{trivago_orginal}</div>
       </Link>
-      <Link href="#" className="group flex items-center justify-center flex-1 h-full">
+      <Link
+        href="#"
+        className="group flex items-center justify-center flex-1 h-full"
+      >
         <div className="group-hover:hidden">{expedia}</div>
         <div className="hidden group-hover:block">{expedia_original}</div>
       </Link>
-    </div>
+    </motion.div>
   );
 
   return (

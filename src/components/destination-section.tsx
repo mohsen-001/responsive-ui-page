@@ -1,4 +1,7 @@
+"use client";
+
 import Card from "./card";
+import { motion } from "motion/react";
 
 const popularDestinations = [
   {
@@ -36,12 +39,17 @@ const popularDestinations = [
 const DestinationSection = () => {
   return (
     <section className="px-20">
-      <div>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ ease: "easeOut", duration: 0.5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
         <div className="text-5xl font-bold">Popular Destination</div>
         <div className="mt-4 text-foreground/50">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </div>
-      </div>
+      </motion.div>
       <div className="mt-6 grid grid-cols-3 gap-4">
         {popularDestinations.map((item, i) => (
           <Card

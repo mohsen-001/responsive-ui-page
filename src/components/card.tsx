@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { ChevronRightIcon } from "lucide-react";
+import { motion } from "motion/react";
 
 interface CardType {
   title: string;
@@ -10,7 +13,13 @@ interface CardType {
 
 const Card = ({ title, desc, img }: CardType) => {
   return (
-    <div className="p-4 group">
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      transition={{ ease: "easeOut", duration: 0.5 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="p-4 group"
+    >
       <div className="relative w-full aspect-[16/9] rounded-4xl overflow-hidden mb-6">
         <Image
           src={img}
@@ -33,7 +42,7 @@ const Card = ({ title, desc, img }: CardType) => {
           <ChevronRightIcon />
         </Button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
