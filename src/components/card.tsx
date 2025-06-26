@@ -18,7 +18,7 @@ const Card = ({ title, desc, img }: CardType) => {
       transition={{ ease: "easeOut", duration: 0.5 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="p-4 group"
+      className="group"
     >
       <div className="relative w-full aspect-[16/9] rounded-4xl overflow-hidden mb-6">
         <Image

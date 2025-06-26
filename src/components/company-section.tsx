@@ -251,7 +251,7 @@ const CompanySection = () => {
   );
 
   return (
-    <section className="flex items-center px-20 max-xl:px-0">
+    <section className="flex items-center px-20 max-xl:px-0 max-md:flex-col max-md:gap-6">
       {renderSocials}
       {renderCompanies}
     </section>

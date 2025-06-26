@@ -20,8 +20,17 @@ const DarkModeBtn = () => {
   if (!mounted) return;
 
   return (
-    <Button size="icon" variant="outline" onClick={handleMode}>
-      {theme === "dark" ? <Moon /> : <Sun />}
+    <Button
+      size="icon"
+      variant="outline"
+      onClick={handleMode}
+      className="size-14"
+    >
+      {theme === "dark" ? (
+        <Moon className="size-5" />
+      ) : (
+        <Sun className="size-5" />
+      )}
     </Button>
   );
 };

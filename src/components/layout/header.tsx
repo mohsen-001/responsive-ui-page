@@ -18,13 +18,13 @@ const Header = () => {
         <Menu className="max-lg:hidden" />
         <div className="flex items-center gap-4">
           <DarkModeBtn />
-          <Button>Book Trip</Button>
+          <Button className="max-[520px]:hidden">Book Trip</Button>
           <Button
             size="icon"
             variant="outline"
             className="size-14 hidden max-lg:flex"
           >
-            <MenuIcon className="size-6" />
+            <MenuIcon className="size-5" />
           </Button>
         </div>
       </div>

@@ -52,7 +52,7 @@ const DestinationSection = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </div>
       </motion.div>
-      <div className="mt-6 grid grid-cols-3 gap-4 max-[1096px]:grid-cols-2">
+      <div className="mt-6 grid grid-cols-3 gap-8 max-[1096px]:grid-cols-2 max-md:grid-cols-1">
         {popularDestinations.map((item, i) => (
           <Card
             title={item.title}

@@ -36,7 +36,7 @@ const HeroSection = () => {
         alt=""
         width={600}
         height={600}
-        className={`absolute top-30 -end-40 z-30 hidden max-xl:block max-xl:-end-28 max-[1096px]:top-16 ${
+        className={`absolute top-30 -end-40 z-30 hidden max-xl:block max-xl:-end-28 max-[1096px]:top-16 max-[520px]:!-end-16 ${
           locale === "fa" && "scale-x-[-1]"
         }`}
       />
@@ -81,7 +81,7 @@ const HeroSection = () => {
             </svg>
           </div>
           <div
-            className={`absolute top-[32px] start-[65px] ${
+            className={`absolute top-[32px] start-[65px] max-md:top-[27px] max-md:start-[42px] ${
               locale === "fa" && "scale-x-[-1]"
             }`}
           >
@@ -99,7 +99,7 @@ const HeroSection = () => {
             </svg>
           </div>
           <div
-            className={`absolute top-[61px] start-[91px] z-20 ${
+            className={`absolute top-[61px] start-[91px] max-md:top-[57px] max-md:start-[70px] z-20 max-[520px]:hidden ${
               locale === "fa" && "scale-x-[-1]"
             }`}
           >
@@ -117,29 +117,31 @@ const HeroSection = () => {
             </svg>
           </div>
           <div className="ms-auto w-fit rounded-ss-[48px] pt-5 ps-5 bg-background relative z-10">
-            <div className="flex items-center bg-foreground/5 justify-end gap-20 py-6 px-10 w-fit rounded-ss-[28px] rounded-se-[28px] group-hover:bg-foreground group-hover:text-background transition-colors">
-              <div className="text-2xl font-bold">Learn More</div>
+            <div className="flex items-center bg-foreground/5 justify-end gap-20 py-6 px-10 max-md:gap-10 max-[520px]:!gap-6 max-md:px-8 max-[520px]:!p-4 w-fit rounded-ss-[28px] rounded-se-[28px] group-hover:bg-foreground group-hover:text-background transition-colors">
+              <div className="text-2xl font-bold max-md:text-lg max-[520px]:!text-base">
+                Learn More
+              </div>
               <ArrowRight />
             </div>
           </div>
-          <div className="rounded-ss-[48px] bg-background pt-5 ps-5 -mt-5">
-            <div className="bg-foreground/5 flex items-center gap-4 p-4 rounded-ss-[28px] rounded-ee-[28px] rounded-es-[28px] group-hover:bg-foreground transition-colors">
+          <div className="rounded-ss-[48px] bg-background pt-5 ps-5 -mt-5 max-[520px]:rounded-ss-none">
+            <div className="bg-foreground/5 flex items-center gap-4 p-4 rounded-ss-[28px] rounded-ee-[28px] rounded-es-[28px] group-hover:bg-foreground transition-colors max-[520px]:flex-col max-[520px]:rounded-ss-none">
               <div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale">
-                <Avatar className="size-16">
+                <Avatar className="size-16 max-md:size-11">
                   <AvatarImage
                     src="https://github.com/shadcn.png"
                     alt="@shadcn"
                   />
                   <AvatarFallback>CN</AvatarFallback>
                 </Avatar>
-                <Avatar className="size-16">
+                <Avatar className="size-16 max-md:size-11">
                   <AvatarImage
                     src="https://github.com/leerob.png"
                     alt="@leerob"
                   />
                   <AvatarFallback>LR</AvatarFallback>
                 </Avatar>
-                <Avatar className="size-16">
+                <Avatar className="size-16 max-md:size-11">
                   <AvatarImage
                     src="https://github.com/evilrabbit.png"
                     alt="@evilrabbit"
@@ -147,9 +149,9 @@ const HeroSection = () => {
                   <AvatarFallback>ER</AvatarFallback>
                 </Avatar>
               </div>
-              <div className="w-[200px] group-hover:text-background">
-                <div className="font-bold">Awesome Places</div>
-                <div>
+              <div className="w-[200px] group-hover:text-background max-md:w-[150px] max-[520px]:!w-[100px]">
+                <div className="font-bold max-md:text-sm">Awesome Places</div>
+                <div className="max-md:text-xs">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </div>
               </div>
