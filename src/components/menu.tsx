@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const _MENUS = ["About", "Tour", "Packages", "Contact"];
-const Menu = ({ className }: { className: string }) => {
+const Menu = ({ className }: { className?: string }) => {
   return (
     <div className={`flex items-center gap-12 ${className}`}>
       {_MENUS.map((menu, i) => (
