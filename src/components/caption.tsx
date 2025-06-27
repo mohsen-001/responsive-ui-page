@@ -1,11 +1,19 @@
 "use client";
 
+import { useLocale } from "next-intl";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
 
 const Caption = () => {
+  const locale = useLocale();
   return (
-    <div className="absolute top-2/4 start-24 -translate-y-2/4 text-black max-md:start-16 max-[520px]:!start-10 max-[400px]:!start-2/4 max-[400px]:!-translate-x-2/4 max-[400px]:!-translate-y-0 max-[400px]:!top-14">
+    <div
+      className={`absolute top-2/4 start-24 -translate-y-2/4 text-black max-md:start-16 max-[520px]:!start-10 max-[400px]:!start-2/4 ${
+        locale === "fa"
+          ? "max-[400px]:!translate-x-2/4"
+          : "max-[400px]:!-translate-x-2/4"
+      } max-[400px]:!-translate-y-0 max-[400px]:!top-14`}
+    >
       <motion.div
         initial={{ opacity: 0, x: 100 }}
         transition={{ ease: "easeOut", duration: 0.5 }}
