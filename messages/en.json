@@ -1,6 +1,28 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "Header": {
+    "logo": "logo",
+    "about": "About",
+    "tour": "Tour",
+    "packages": "Packages",
+    "contact": "Contact",
+    "book-trip": "Book Trip"
+  },
+  "HeroSection": {
+    "title": "Experience The Magic Of Flight!",
+    "sub-title": "Elevate Your Travel Journey",
+    "book-a-trip-now": "Book A Trip Now",
+    "learn-more": "Learn More",
+    "awesome-places": "Awesome Places",
+    "desc": "Explore breathtaking travel destinations worldwide.",
+    "follow": "Follow"
+  },
+  "DestinationSection": {
+    "title": "Popular Destination",
+    "sub-title": "Discover top travel destinations loved for their unique charm and beauty."
+  },
+  "Footer": {
+    "logo": "LOGO",
+    "copyright": "© 2025 Your Company Name. All rights reserved.",
+    "lang": "Languages"
   }
 }

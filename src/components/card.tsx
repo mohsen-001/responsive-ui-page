@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import { ChevronRightIcon } from "lucide-react";
 import { motion } from "motion/react";
+import { useLocale } from "next-intl";
 
 interface CardType {
   title: string;
@@ -12,6 +13,7 @@ interface CardType {
 }
 
 const Card = ({ title, desc, img }: CardType) => {
+  const locale = useLocale();
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
@@ -39,7 +41,7 @@ const Card = ({ title, desc, img }: CardType) => {
           size="icon"
           className="bg-m-primary hover:bg-m-primary/80 text-white size-12"
         >
-          <ChevronRightIcon />
+          <ChevronRightIcon className={`${locale === "fa" && "rotate-180"}`} />
         </Button>
       </div>
     </motion.div>

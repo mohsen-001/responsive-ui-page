@@ -3,11 +3,12 @@
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { ArrowRight } from "lucide-react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Caption from "./caption";
 
 const HeroSection = () => {
   const locale = useLocale();
+  const t = useTranslations("HeroSection");
 
   return (
     <section className="relative">
@@ -119,7 +120,7 @@ const HeroSection = () => {
           <div className="ms-auto w-fit rounded-ss-[48px] pt-5 ps-5 bg-background relative z-10">
             <div className="flex items-center bg-foreground/5 justify-end gap-20 py-6 px-10 max-md:gap-10 max-[520px]:!gap-6 max-md:px-8 max-[520px]:!p-4 w-fit rounded-ss-[28px] rounded-se-[28px] group-hover:bg-foreground group-hover:text-background transition-colors">
               <div className="text-2xl font-bold max-md:text-lg max-[520px]:!text-base">
-                Learn More
+                {t("learn-more")}
               </div>
               <ArrowRight />
             </div>
@@ -150,10 +151,10 @@ const HeroSection = () => {
                 </Avatar>
               </div>
               <div className="w-[200px] group-hover:text-background max-md:w-[150px] max-[520px]:!w-[100px]">
-                <div className="font-bold max-md:text-sm">Awesome Places</div>
-                <div className="max-md:text-xs">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <div className="font-bold max-md:text-sm">
+                  {t("awesome-places")}
                 </div>
+                <div className="max-md:text-xs">{t("desc")}</div>
               </div>
             </div>
           </div>

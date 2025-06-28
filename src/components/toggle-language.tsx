@@ -10,10 +10,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { usePathname, useRouter } from "@/i18n/navigation";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const ToggleLanguage = () => {
   const locale = useLocale();
+  const t = useTranslations("Footer");
   const router = useRouter();
   const pathname = usePathname();
 
@@ -22,13 +23,17 @@ const ToggleLanguage = () => {
   };
 
   return (
-    <Select value={locale} onValueChange={(value) => handleToggle(value)}>
+    <Select
+      value={locale}
+      onValueChange={(value) => handleToggle(value)}
+      dir={locale === "fa" ? "rtl" : "ltr"}
+    >
       <SelectTrigger className="w-[120px] bg-background">
         <SelectValue placeholder="Select a fruit" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectLabel>Languages</SelectLabel>
+          <SelectLabel>{t("lang")}</SelectLabel>
           <SelectItem value="fa">فارسی</SelectItem>
           <SelectItem value="en">English</SelectItem>
         </SelectGroup>

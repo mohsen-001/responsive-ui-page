@@ -3,6 +3,7 @@
 import { Dribbble, Facebook, Github, TwitterIcon } from "lucide-react";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
 
 const airbnb_original = (
   <svg
@@ -161,6 +162,8 @@ const expedia = (
 );
 
 const CompanySection = () => {
+  const t = useTranslations("HeroSection");
+
   const renderSocials = (
     <motion.div
       initial={{ opacity: 0, x: -100 }}
@@ -169,7 +172,7 @@ const CompanySection = () => {
       viewport={{ once: true }}
       className="flex items-center gap-6 border py-4 px-6 rounded-full w-fit"
     >
-      Follow
+      {t("follow")}
       <div className="flex items-center gap-3">
         <Link
           href="#"
