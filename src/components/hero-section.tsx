@@ -127,24 +127,18 @@ const HeroSection = () => {
           </div>
           <div className="rounded-ss-[48px] bg-background pt-5 ps-5 -mt-5 max-[520px]:rounded-ss-none">
             <div className="bg-foreground/5 flex items-center gap-4 p-4 rounded-ss-[28px] rounded-ee-[28px] rounded-es-[28px] group-hover:bg-foreground transition-colors max-[520px]:flex-col max-[520px]:rounded-ss-none">
-              <div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale">
+              <div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2">
                 <Avatar className="size-16 max-md:size-11">
-                  <AvatarImage
-                    src="https://github.com/shadcn.png"
-                    alt="@shadcn"
-                  />
+                  <AvatarImage src="/images/cities/paris.jpg" alt="@shadcn" />
                   <AvatarFallback>CN</AvatarFallback>
                 </Avatar>
                 <Avatar className="size-16 max-md:size-11">
-                  <AvatarImage
-                    src="https://github.com/leerob.png"
-                    alt="@leerob"
-                  />
+                  <AvatarImage src="/images/cities/ny.jpg" alt="@leerob" />
                   <AvatarFallback>LR</AvatarFallback>
                 </Avatar>
                 <Avatar className="size-16 max-md:size-11">
                   <AvatarImage
-                    src="https://github.com/evilrabbit.png"
+                    src="/images/cities/rome.jpg"
                     alt="@evilrabbit"
                   />
                   <AvatarFallback>ER</AvatarFallback>
