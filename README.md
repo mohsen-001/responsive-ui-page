@@ -1,4 +1,4 @@
-# ✈️ Travel Explorer (Design Challenge)
+# 🏆 Design Challenge
 
 A modern travel-themed website built with **Next.js**, styled using **Tailwind CSS**, and enhanced with **ShadCN UI** components. The website supports **dark mode** and it features smooth animations using **Framer Motion**, supports **i18n** (including **RTL languages**), and provides a multilingual experience for users across different regions.
 
