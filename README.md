@@ -16,6 +16,12 @@ A modern travel-themed website built with **Next.js**, styled using **Tailwind C
 
 ---
 
+## 👁️ Live Preview
+
+https://responsive-ui-page.vercel.app/
+
+---
+
 ## 📦 Getting Started
 
 ### 1. Run the project
