@@ -2,7 +2,7 @@
 
 A modern travel-themed website built with **Next.js**, styled using **Tailwind CSS**, and enhanced with **ShadCN UI** components. The website supports **dark mode** and it features smooth animations using **Framer Motion**, supports **i18n** (including **RTL languages**), and provides a multilingual experience for users across different regions.
 
-> 📝 I came across the job posting about three days ago, so due to the limited time, some parts of the UI may not be fully polished or responsive—particularly on mobile devices.
+> 📝 I recently became aware of this job opportunity (around 3 days ago), so given the short time frame, some parts of the UI might not be completely polished or responsive on smaller screens.
 
 ---
 
