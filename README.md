@@ -6,6 +6,12 @@ A modern travel-themed website built with **Next.js**, styled using **Tailwind C
 
 ---
 
+## 👁️ Live Preview
+
+https://responsive-ui-page.vercel.app/
+
+---
+
 ## 🚀 Tech Stack
 
 - **Framework**: [Next.js](https://nextjs.org/)
@@ -13,12 +19,6 @@ A modern travel-themed website built with **Next.js**, styled using **Tailwind C
 - **UI Components**: [ShadCN UI](https://ui.shadcn.com/)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
 - **Internationalization**: `next-intl` with **RTL support**
-
----
-
-## 👁️ Live Preview
-
-https://responsive-ui-page.vercel.app/
 
 ---
 
