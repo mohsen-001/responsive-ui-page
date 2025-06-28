@@ -9,7 +9,7 @@ const Caption = () => {
   const t = useTranslations("HeroSection");
   return (
     <div
-      className={`absolute top-2/4 start-24 -translate-y-2/4 text-black max-md:start-16 max-[520px]:!start-10 max-[400px]:!start-2/4 ${
+      className={`absolute w-[50%] top-2/4 start-24 -translate-y-2/4 text-black max-md:start-16 max-[520px]:!start-10 max-[400px]:!start-2/4 ${
         locale === "fa"
           ? "max-[400px]:!translate-x-2/4"
           : "max-[400px]:!-translate-x-2/4"
